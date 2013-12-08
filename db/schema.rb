@@ -11,31 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117140318) do
-
-  create_table "entities", force: true do |t|
-    t.string   "type",       limit: 50
-    t.string   "json"
-    t.string   "key01",      limit: 11
-    t.string   "key02",      limit: 11
-    t.string   "key03",      limit: 11
-    t.string   "key04",      limit: 11
-    t.string   "key05",      limit: 11
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "deleted_at"
-  end
-
-  add_index "entities", ["type", "key01", "key02", "key03", "key04", "key05"], name: "entities_idx", using: :btree
+ActiveRecord::Schema.define(version: 20131205021749) do
 
   create_table "links", force: true do |t|
-    t.integer  "entity_id"
-    t.integer  "link_to_id"
+    t.integer  "thing_id"
+    t.integer  "link_thing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "deleted_at"
   end
 
-  add_index "links", ["entity_id", "link_to_id"], name: "index_links_on_entity_id_and_link_to_id", using: :btree
+  add_index "links", ["thing_id", "link_thing_id"], name: "index_links_on_thing_id_and_link_thing_id", using: :btree
+
+  create_table "samples", force: true do |t|
+    t.string   "name"
+    t.decimal  "price",      precision: 10, scale: 0
+    t.datetime "started_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "things", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

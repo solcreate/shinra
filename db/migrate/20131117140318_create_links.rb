@@ -1,11 +1,10 @@
 class CreateLinks < ActiveRecord::Migration
   def change
     create_table :links do |t|
-      t.references :entity
-      t.integer :link_to_id
+      t.references :thing
+      t.integer :link_thing_id
       t.timestamps
-      t.datetime :deleted_at
     end
-    add_index :links, [ :entity_id, :link_to_id ]
+    add_index :links, [ :thing_id, :link_thing_id ]
   end
 end
