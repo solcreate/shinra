@@ -1,0 +1,4 @@
+sample:
+  name:
+    validates:
+      precense: true

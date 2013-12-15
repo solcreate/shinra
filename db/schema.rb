@@ -11,27 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205021749) do
+ActiveRecord::Schema.define(version: 20131209105121) do
 
   create_table "links", force: true do |t|
-    t.integer  "thing_id"
-    t.integer  "link_thing_id"
+    t.integer  "matter_id1"
+    t.integer  "matter_id2"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "links", ["thing_id", "link_thing_id"], name: "index_links_on_thing_id_and_link_thing_id", using: :btree
+  add_index "links", ["matter_id1", "matter_id2"], name: "index_links_on_matter_id1_and_matter_id2", using: :btree
+
+  create_table "matters", force: true do |t|
+    t.string   "type"
+    t.string   "data"
+    t.string   "idx1"
+    t.string   "idx2"
+    t.string   "idx3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "matters", ["idx1", "idx2", "idx3"], name: "index_matters_on_idx1_and_idx2_and_idx3", using: :btree
 
   create_table "samples", force: true do |t|
     t.string   "name"
     t.decimal  "price",      precision: 10, scale: 0
     t.datetime "started_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "things", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

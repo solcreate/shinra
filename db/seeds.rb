@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+system = Matter.create(type: 'NameSpace', data: "{name:'System'}")
+system.matters << Matter.create(type: 'Class', data: "{name: ''}")
