@@ -41,5 +41,25 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+group :development do
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-stack_explorer"
+  gem "pry-byebug"
+  gem "hirb"
+  gem "hirb-unicode"
+  gem "tapp"
+  gem "awesome_print"
+
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "quiet_assets"
+  gem "annotate"
+  gem "timecop"
+  gem "colorize_unpermitted_parameters"
+  gem "rack-mini-profiler"
+  gem "xray-rails"
+end
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]

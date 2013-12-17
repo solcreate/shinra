@@ -4,6 +4,8 @@ Shinra::Application.routes.draw do
   post 'login' => 'sessions#create'
   root 'samples#index'
 
+  post 'try' => 'page#try_code'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
