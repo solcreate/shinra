@@ -1,19 +1,19 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -40,6 +40,26 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
+
+group :development do
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-stack_explorer"
+  gem "pry-byebug"
+  gem "hirb"
+  gem "hirb-unicode"
+  gem "tapp"
+  gem "awesome_print"
+
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "quiet_assets"
+  gem "annotate"
+  gem "timecop"
+  gem "colorize_unpermitted_parameters"
+  gem "rack-mini-profiler"
+  gem "xray-rails"
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
