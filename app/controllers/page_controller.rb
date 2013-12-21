@@ -11,8 +11,7 @@ class PageController < ApplicationController
   end
 
   def render_result(object)
-    hash = {}
-    hash[:result] = object
+    hash = {result: object}
     render json: JSON.pretty_generate(JSON.parse(hash.to_json))
   end
 end

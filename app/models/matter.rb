@@ -1,6 +1,7 @@
 class Matter < ActiveRecord::Base
   has_many :links, class_name: 'Link', foreign_key: 'matter_id1'
   has_many :matters, through: :links, source: :matter2
+
   after_initialize do
     @hash = JSON.parse(self.data) if self.data.present?
   end
