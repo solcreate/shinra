@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: 30ca43b72a1a986a35055f9999a49b62e2257f5c
+  specs:
+    compass-rails (1.1.2)
+      compass (>= 0.12.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -25,13 +32,13 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    annotate (2.6.0)
+    annotate (2.6.1)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (4.0.1)
     atomic (1.1.14)
     awesome_print (1.2.0)
-    better_errors (1.0.1)
+    better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
@@ -40,6 +47,7 @@ GEM
     byebug (2.5.0)
       columnize (~> 0.3.6)
       debugger-linecache (~> 1.2.0)
+    chunky_png (1.2.9)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -51,10 +59,15 @@ GEM
     colorize_unpermitted_parameters (0.0.2)
       term-ansicolor
     columnize (0.3.6)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    fssm (0.2.10)
     hike (1.2.3)
     hirb (0.7.1)
     hirb-unicode (0.0.5)
@@ -81,10 +94,10 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-byebug (1.2.0)
+    pry-byebug (1.2.1)
       byebug (~> 2.2)
       pry (~> 0.9.12)
-    pry-doc (0.4.6)
+    pry-doc (0.5.1)
       pry (>= 0.9)
       yard (>= 0.8)
     pry-rails (0.3.2)
@@ -95,7 +108,7 @@ GEM
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
-    rack-mini-profiler (0.1.31)
+    rack-mini-profiler (0.9.0)
       rack (>= 1.1.3)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -112,10 +125,10 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.2.12)
+    sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -141,19 +154,19 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    timecop (0.7.0)
+    timecop (0.7.1)
     tins (0.13.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.1.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.3.3)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode-display_width (0.1.1)
-    xray-rails (0.1.11)
+    xray-rails (0.1.12)
       coffee-rails
       rails (>= 3.1.0)
     yard (0.8.7.3)
@@ -168,6 +181,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails
   colorize_unpermitted_parameters
+  compass-rails!
   hirb
   hirb-unicode
   jbuilder (~> 1.2)
@@ -185,5 +199,5 @@ DEPENDENCIES
   tapp
   timecop
   turbolinks
-  uglifier (>= 1.3.0)
+  uglifier
   xray-rails
