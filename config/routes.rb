@@ -2,7 +2,7 @@ Shinra::Application.routes.draw do
 
   resources :samples
   post 'login' => 'sessions#create'
-  root 'samples#index'
+  root 'pages#home'
 
   post 'try' => 'page#try_code'
 
