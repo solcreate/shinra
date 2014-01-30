@@ -35,22 +35,31 @@ end
 
 group :development do
   gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-stack_explorer'
-  gem 'pry-byebug'
-  gem 'hirb'
-  gem 'hirb-unicode'
-  gem 'tapp'
-  gem 'awesome_print'
+  gem 'pry-doc' # see docments 'show-docs' see source 'show-source'
+  gem 'pry-stack_explorer' # show-stack command can see stack. up down frame
+  gem 'pry-byebug' # you can stop the code when write binding.pry
+  gem 'hirb' # show active record like table
+  gem 'hirb-unicode' # show active record like table
+  gem 'tapp' # add tapp method to object. available print method chain result. ex [1,2,3,4,5].map{|x| x**2}.tapp.select {|x| x>10 }
 
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets'
-  gem 'annotate'
-  gem 'timecop'
+  #gem 'awesome_print' # debug printing looks be better. add following 2 rows to ~/.pryrc
+  # require 'awesome_print'
+  # Pry.print = proc{|output,value| output.puts value.ai }
+
+  gem 'better_errors' # make better error window
+  gem 'binding_of_caller' # available debug in error window
+
+  gem 'quiet_assets' # stop logging about assets file access.
+  gem 'annotate' # bundle exec annotate command writes schema difinition to models.
+
+  gem 'timecop' # temporary availables changing local datetime. Combinient for test usage.
+  # ex Timecop.travel(Date.new(2011,10,4))
+  # ex Timecop.return
+
   gem 'colorize_unpermitted_parameters'
   #gem 'rack-mini-profiler'
-  gem 'xray-rails'
+  gem 'xray-rails' # show UI bones by cmd+shift+x(mac) ctrl+shift+x
+  # u can open file by click. ~/.xrayconfig add row. :editor: '/usr/local/bin/mine'
 end
 
 # Use debugger

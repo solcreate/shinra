@@ -11,7 +11,7 @@ models.each do |model, columns|
     methods.each do |method, validations|
       validations.each do |validation, value|
         klass = model.to_s.camelcase.constantize
-        puts "#{method} :#{column}, #{validation}: #{value}"
+        puts "#{model} #{method} :#{column}, #{validation}: #{value}"
         klass.class_eval("#{method} :#{column}, #{validation}: #{value}")
       end
     end
